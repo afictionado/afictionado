@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--linen: #f3e9dc;
+	--caramel: #c08552;
+	--caput-mortuum: #5e3023;
+	--raw-umber: #895737;
+	--desert-sand: #dab49d;
+	--whiteout: rgba(255, 255, 255, 30%);
+	--gradient: linear-gradient(to right, var(--caramel), var(--caput-mortuum));
+}
+
+* {
+	transition: all 500ms;
+}
+
+html {
+	background-color: var(--linen);
+	overflow: hidden;
+}
+
+.grid-rows-8 {
+	grid-template-rows: repeat(8, minmax(0, 1fr));
+}
+
+.animated-cow-print-bg {
+	background-image: url("$lib/assets/cow-print.png");
+	background-size: cover;
+	animation: cowPrint 100s linear infinite;
+}
+
+@keyframes cowPrint {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 100% 0;
+	}
+}
+
+a {
+	background-image: var(--gradient);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-clip: text;
+	color: transparent;
+	display: inline-block;
+	position: relative;
+	transition: all 0.5s;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 2px;
+		background-image: var(--gradient);
+		bottom: -2px;
+		left: 0;
+		transition: all 0.5s;
+	}
+
+	&:hover {
+		transform: scale(1.05);
+		text-shadow: 0 2px 10px rgba(0, 0, 0, 15%);
+		&::before {
+			width: 100%;
+		}
+	}
+}
