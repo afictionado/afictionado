@@ -16,19 +16,14 @@
 	transition: all 0.5s;
 }
 
-html {
+body {
 	background-color: var(--linen);
+	background-size: cover;
 	overflow: hidden;
 }
 
 .grid-rows-8 {
 	grid-template-rows: repeat(8, minmax(0, 1fr));
-}
-
-.animated-cow-print-bg {
-	background-image: url("$lib/assets/cow-print.png");
-	background-size: cover;
-	animation: cowPrint 100s linear infinite;
 }
 
 .nav-sidebar {
@@ -40,13 +35,4 @@ html {
 	border-top-right-radius: 1rem;
 	border-bottom-right-radius: 1rem;
 	--tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-}
-
-@keyframes cowPrint {
-	0% {
-		background-position: 0 0;
-	}
-	100% {
-		background-position: 100% 0;
-	}
 }

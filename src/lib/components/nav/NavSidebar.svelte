@@ -11,7 +11,10 @@
 	];
 </script>
 
-<nav class="animated-cow-print-bg nav-sidebar shadow-2xl flex-col">
+<nav
+	class="nav-sidebar cow-print-bg shadow-2xl flex-col"
+	style="animation: bgLeft 100s linear infinite;"
+>
 	<TitleIcon />
 	<ul class="grid grid-rows-5">
 		{#each navLinks as navLink}
@@ -21,3 +24,15 @@
 		{/each}
 	</ul>
 </nav>
+
+<style>
+	@keyframes bgLeft {
+		0%,
+		100% {
+			background-position: 0 0;
+		}
+		50% {
+			background-position: 100% 0;
+		}
+	}
+</style>
