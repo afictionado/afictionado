@@ -9,7 +9,7 @@
 		pointer-events: none;
 		width: 100vw;
 		height: 100vh;
-		animation: zoomBg 60s infinite alternate;
+		animation: zoomBg 60s linear infinite;
 	}
 
 	@keyframes zoomBg {
