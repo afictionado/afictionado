@@ -2,20 +2,22 @@
 
 <style>
 	.texture-overlay {
-		position: absolute;
-		background-image: url("/assets/cow-print.svg");
-		background-repeat: repeat;
-		width: 100%;
-		height: 100%;
-		animation: moveRight 10s linear infinite;
+		position: fixed;
+		background-image: url("/assets/background-textures/polka.svg");
+		background-size: cover;
+		background-position: center;
+		pointer-events: none;
+		width: 100vw;
+		height: 100vh;
+		animation: zoomBg 60s infinite alternate;
 	}
 
-	@keyframes moveRight {
-		0% {
-			background-position: 0 0;
+	@keyframes zoomBg {
+		0%, 100% {
+			background-size: 100% 100%;
 		}
-		100% {
-			background-position: -100% 0;
+		50% {
+			background-size: 150% 150%;
 		}
 	}
 </style>

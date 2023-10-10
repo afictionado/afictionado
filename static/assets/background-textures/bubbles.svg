@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Bubbles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231f20;
+        opacity: .05;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="0" cy="0" r="170.1"/>
+  <circle class="cls-1" cx="220.96" cy="210.5" r="64.65"/>
+  <circle class="cls-1" cx="170.1" cy="382.77" r="31.38"/>
+  <circle class="cls-1" cx="632.63" cy="463.85" r="189.54"/>
+  <circle class="cls-1" cx="344.41" cy="346.9" r="48.33"/>
+  <circle class="cls-1" cx="545.44" cy="69.03" r="148.7"/>
+  <circle class="cls-1" cx="787.66" cy="194.6" r="49.58"/>
+  <circle class="cls-1" cx="979.08" cy="359.04" r="79.71"/>
+  <circle class="cls-1" cx="1023.02" cy="45.85" r="141.84"/>
+  <circle class="cls-1" cx="1446.04" cy="-29.47" r="220.92"/>
+  <circle class="cls-1" cx="1591.64" cy="413.64" r="145.61"/>
+  <circle class="cls-1" cx="930.13" cy="579.33" r="48.95"/>
+  <circle class="cls-1" cx="1228.61" cy="559.25" r="158.79"/>
+  <circle class="cls-1" cx="1600" cy="900" r="140.5"/>
+  <circle class="cls-1" cx="1495.3" cy="661.82" r="42.19"/>
+  <circle class="cls-1" cx="1164.84" cy="253.86" r="44.46"/>
+  <circle class="cls-1" cx="1352.95" cy="320.75" r="45.93"/>
+  <circle class="cls-1" cx="0" cy="602.49" r="163.75"/>
+  <circle class="cls-1" cx="19.74" cy="892.2" r="60.94"/>
+  <circle class="cls-1" cx="486.4" cy="844.53" r="146.24"/>
+  <circle class="cls-1" cx="200.22" cy="888.44" r="43.91"/>
+  <circle class="cls-1" cx="888.26" cy="821.23" r="122.94"/>
+  <circle class="cls-1" cx="702.59" cy="729.1" r="43.01"/>
+  <circle class="cls-1" cx="23.94" cy="265.62" r="55.13"/>
+  <circle class="cls-1" cx="277.42" cy="34.04" r="66.99"/>
+  <circle class="cls-1" cx="1148.32" cy="856.18" r="75.19"/>
+  <circle class="cls-1" cx="1353.98" cy="792.05" r="58.97"/>
+  <circle class="cls-1" cx="307.16" cy="538" r="99.26"/>
+  <circle class="cls-1" cx="229.93" cy="740.9" r="60.3"/>
+</svg>
