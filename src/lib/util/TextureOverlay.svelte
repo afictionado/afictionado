@@ -3,7 +3,7 @@
 <style>
 	.texture-overlay {
 		position: fixed;
-		background-image: url("/assets/background-textures/polka.svg");
+		background-image: url("/assets/background-textures/blobs.svg");
 		background-size: cover;
 		background-position: center;
 		pointer-events: none;
