@@ -13,7 +13,8 @@
 	}
 
 	@keyframes zoomBg {
-		0%, 100% {
+		0%,
+		100% {
 			background-size: 100% 100%;
 		}
 		50% {

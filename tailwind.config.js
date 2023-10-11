@@ -8,7 +8,8 @@ export default {
 				caramel: "#C08552",
 				"caput-mortuum": "#5E3023",
 				"raw-umber": "#895737",
-				"desert-sand": "#DAB49D"
+				"desert-sand": "#DAB49D",
+				"light-beige": "#E6D2B7"
 			}
 		}
 	},
