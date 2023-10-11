@@ -22,7 +22,7 @@
 		}, 150);
 	}}
 >
-	<span class="hover-text-fade absolute flex items-center bottom-1 text-6xl opacity-20 z-10"
+	<span class="hover-text-fade absolute flex items-center bottom-1 text-6xl opacity-20"
 		>{secondaryText}</span
 	>
 	<span class="relative opacity-60 font-semibold text-4xl">{href}</span>
