@@ -12,7 +12,7 @@
 	];
 </script>
 
-<RetractableSidebar side="left">
+<RetractableSidebar side="left" width="14rem">
 	<nav
 		class="nav-sidebar float-left rounded-r-2xl shadow-2xl flex-col"
 		style="animation: bgLeft 100s linear infinite;"
