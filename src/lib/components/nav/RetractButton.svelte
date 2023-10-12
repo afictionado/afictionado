@@ -23,7 +23,7 @@
 
 	.left-rb {
 		@apply rounded-r-2xl;
-		transform: translateX(-3.25rem);
+		transform: translateX(-3rem);
 		&:hover {
 			transform: translateX(0rem);
 		}
@@ -33,7 +33,7 @@
 		@apply rounded-l-2xl;
 		transform: translateX(-1rem);
 		&:hover {
-			transform: translateX(-4.25rem);
+			transform: translateX(-4rem);
 		}
 	}
 </style>
