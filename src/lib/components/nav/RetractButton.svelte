@@ -1,17 +1,17 @@
 <script lang="ts">
 	export let side: "left" | "right";
 	export let sidebarOpen: boolean;
-	let buttonEmoji = side === "right" ? "➡️" : "⬅️";
+	let buttonText = side === "right" ? "→" : "←";
 	function toggleSidebar() {
 		sidebarOpen = !sidebarOpen;
 		setTimeout(() => {
-			buttonEmoji = buttonEmoji === "➡️" ? "⬅️" : "➡️";
+			buttonText = buttonText === "→" ? "←" : "→";
 		}, 150);
 	}
 </script>
 
 <button class="retract-sidebar-button {side}-rb active-text-fade" on:click={toggleSidebar}>
-	{buttonEmoji}
+	{buttonText}
 </button>
 
 <style>
