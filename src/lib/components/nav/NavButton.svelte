@@ -30,6 +30,17 @@
 
 <!-- IF IT WORKS, DO NOT FIX IT. -->
 <style>
+	.hover-text-fade {
+		animation: textFade 0.3s ease;
+		&:hover {
+			animation: textFade 0.3s ease;
+		}
+	}
+
+	.hover-text-fade:hover {
+		animation: textFadeClone 0.3s ease;
+	}
+
 	@keyframes textFade {
 		0%,
 		100% {
@@ -48,16 +59,5 @@
 		50% {
 			opacity: 0;
 		}
-	}
-
-	.hover-text-fade {
-		animation: textFade 0.3s ease;
-		&:hover {
-			animation: textFade 0.3s ease;
-		}
-	}
-
-	.hover-text-fade:hover {
-		animation: textFadeClone 0.3s ease;
 	}
 </style>
