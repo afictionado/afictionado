@@ -16,7 +16,7 @@
 
 <style>
 	.retract-sidebar-button {
-		@apply fixed h-1/3 top-1/3 bg-light-beige p-4 -z-20 text-4xl shadow-xl items-center;
+		@apply fixed h-1/3 top-1/3 bg-light-beige-500 p-4 -z-20 text-4xl shadow-xl items-center;
 		color: rgba(0, 0, 0, 50%);
 		transition: all 0.5s;
 	}
