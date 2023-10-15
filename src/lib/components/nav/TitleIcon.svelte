@@ -1,5 +1,5 @@
 <script lang="ts">
-	import AfictionadoIcon from "$lib/util/AfictionadoIcon.svelte";
+	import AfictionadoIcon from "$lib/components/util/AfictionadoIcon.svelte";
 </script>
 
 <button

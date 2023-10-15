@@ -20,7 +20,7 @@
 		class="nav-sidebar flex flex-col float-right shadow-2xl rounded-l-2xl justify-between"
 		style={`animation: bgRight 100s linear infinite; width: ${widthInRem}rem`}
 	>
-		<slot />
+		<div />
 		<div class="grid grid-cols-2">
 			<button
 				on:click={extendWidth}
