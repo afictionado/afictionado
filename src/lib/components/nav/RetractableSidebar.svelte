@@ -1,11 +1,20 @@
 <script lang="ts">
 	import RetractSidebarButton from "$lib/components/nav/RetractButton.svelte";
+	import { leftBarWidthOnScreen, rightBarWidthOnScreen } from "./widthOnScreenStore";
+
 	export let side: "left" | "right";
 	export let width: string;
 	let sidebarOpen = true;
-	$: slotRetract = `transform: translateX(${sidebarOpen
-		? (side === "left" ? 0 : `-${width}`)
-		: (side === "left" ? `-${width}` : 0)});`;
+	$: slotRetract = `transform: translateX(${
+		sidebarOpen ? (side === "left" ? 0 : `-${width}`) : side === "left" ? `-${width}` : 0
+	});`;
+
+	$: widthOnScreen = sidebarOpen ? width : "0";
+	$: if (side === "left") {
+		$leftBarWidthOnScreen = widthOnScreen;
+	} else {
+		$rightBarWidthOnScreen = widthOnScreen;
+	}
 </script>
 
 <div

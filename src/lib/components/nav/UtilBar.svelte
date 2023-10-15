@@ -22,8 +22,13 @@
 	>
 		<slot />
 		<div class="grid grid-cols-2">
-			<button on:click={extendWidth} class="util-bar-size-button rounded-l-2xl m-4 mr-0 hover:text-black">⬅️</button>
-			<button on:click={reduceWidth} class="util-bar-size-button m-4 ml-0 hover:text-black">➡️</button>
+			<button
+				on:click={extendWidth}
+				class="util-bar-size-button rounded-l-2xl m-4 mr-0 hover:text-black">⬅️</button
+			>
+			<button on:click={reduceWidth} class="util-bar-size-button m-4 ml-0 hover:text-black"
+				>➡️</button
+			>
 		</div>
 	</div>
 </RetractableSidebar>

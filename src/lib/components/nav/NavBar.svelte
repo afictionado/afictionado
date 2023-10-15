@@ -2,7 +2,7 @@
 	import TitleIcon from "$lib/components/nav/TitleIcon.svelte";
 	import NavButton from "$lib/components/nav/NavButton.svelte";
 	import RetractableSidebar from "$lib/components/nav/RetractableSidebar.svelte";
-	
+
 	const navLinks = [
 		["home", "家", "🏡"],
 		["explore", "探", "🌎"],
