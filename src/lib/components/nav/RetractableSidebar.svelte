@@ -2,8 +2,10 @@
 	import RetractSidebarButton from "$lib/components/nav/RetractButton.svelte";
 	export let side: "left" | "right";
 	export let width: string;
-	let sidebarOpen = side === "left";
-	$: slotRetract = `transform: translateX(${sidebarOpen ? "0" : `-${width}`});`;
+	let sidebarOpen = true;
+	$: slotRetract = `transform: translateX(${sidebarOpen
+		? (side === "left" ? 0 : `-${width}`)
+		: (side === "left" ? `-${width}` : 0)});`;
 </script>
 
 <div
