@@ -22,10 +22,10 @@
 		}, 150);
 	}}
 >
-	<span class="hover-text-fade absolute flex items-center bottom-3 text-5xl opacity-20"
+	<span class="hover-text-fade absolute flex items-center bottom-2 text-5xl opacity-20"
 		>{secondaryText}</span
 	>
-	<span class="relative opacity-60 font-semibold text-4xl">{href}</span>
+	<span class="relative opacity-[65%] font-semibold text-4xl">{href}</span>
 </button>
 
 <!-- IF IT WORKS, DO NOT FIX IT. -->

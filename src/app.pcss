@@ -10,7 +10,29 @@
 	--desert-sand: #dab49d;
 	--light-beige: #e6d2b7;
 	--whiteout: rgba(255, 255, 255, 30%);
-	--blackout: rgba(0, 0, 0, 65%);
+	--blackout: rgba(0, 0, 0, 60%);
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, button {
+	color: var(--blackout);
+}
+
+* {
+	transition: all 0.3s;
+}
+
+a {
+	@apply font-semibold;
+	text-decoration: underline;
+	color: black;
+	opacity: 60%;
+	background-image: linear-gradient(to right, var(--caramel), var(--caput-mortuum));
+	background-size: cover;
+	background-clip: text;
+
+	&:hover {
+		color: transparent;
+	}
 }
 
 body {

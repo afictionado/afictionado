@@ -2,7 +2,7 @@
 	import TitleIcon from "$lib/components/nav/TitleIcon.svelte";
 	import NavButton from "$lib/components/nav/NavButton.svelte";
 	import RetractableSidebar from "$lib/components/nav/RetractableSidebar.svelte";
-
+	
 	const navLinks = [
 		["home", "家", "🏡"],
 		["explore", "探", "🌎"],
@@ -12,7 +12,7 @@
 	];
 </script>
 
-<RetractableSidebar side="left" width="14rem">
+<RetractableSidebar side="left" width="12rem">
 	<nav
 		class="nav-sidebar float-left rounded-r-2xl shadow-2xl flex-col"
 		style="animation: bgLeft 100s linear infinite;"
