@@ -143,5 +143,6 @@ Project Link: [https://github.com/afictionado/afictionado](https://github.com/af
 Apart from the major technologies listed above, this project wouldn't have been possible without the support of:
 
 - [AO3](https://archiveofourown.org), [Wattpad](https://wattpad.com), [Fanfiction.net](https://fanfiction.net), [Quotev](https://quotev.com), [Tumblr](https://tumblr.com), etc. There are too many to list.
+- This README was built based on [this amazing template](https://github.com/othneildrew/Best-README-Template).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
