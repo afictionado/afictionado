@@ -1,8 +1,5 @@
 <script lang="ts">
-	import {
-		leftBarWidthOnScreen,
-		rightBarWidthOnScreen
-	} from "$lib/components/nav/widthOnScreenStore";
+	import { leftBarWidthOnScreen, rightBarWidthOnScreen } from "$lib/stores/sidebarWidthOnScreen";
 
 	let leftMargin: unknown;
 	let rightMargin: unknown;

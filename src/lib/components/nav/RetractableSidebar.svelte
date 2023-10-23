@@ -1,6 +1,6 @@
 <script lang="ts">
 	import RetractSidebarButton from "$lib/components/nav/RetractButton.svelte";
-	import { leftBarWidthOnScreen, rightBarWidthOnScreen } from "./widthOnScreenStore";
+	import { leftBarWidthOnScreen, rightBarWidthOnScreen } from "../../stores/sidebarWidthOnScreen";
 
 	export let side: "left" | "right";
 	export let width: string;

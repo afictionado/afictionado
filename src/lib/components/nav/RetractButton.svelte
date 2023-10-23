@@ -10,19 +10,15 @@
 	}
 </script>
 
-<button class="retract-sidebar-button {side}-rb active-text-fade" on:click={toggleSidebar}>
+<button
+	class="inline-block fixed h-1/3 top-1/3 p-4 -z-20 text-4xl transition-all duration-500 {side}-rb active-text-fade"
+	on:click={toggleSidebar}
+>
 	{buttonText}
 </button>
 
 <style>
-	.retract-sidebar-button {
-		@apply fixed h-1/3 top-1/3 bg-light-beige-500 p-4 -z-20 text-4xl shadow-xl items-center;
-		color: rgba(0, 0, 0, 50%);
-		transition: all 0.5s;
-	}
-
 	.left-rb {
-		@apply rounded-r-2xl;
 		transform: translateX(-3rem);
 		&:hover {
 			transform: translateX(0rem);
@@ -30,7 +26,6 @@
 	}
 
 	.right-rb {
-		@apply rounded-l-2xl;
 		transform: translateX(-1rem);
 		&:hover {
 			transform: translateX(-4rem);

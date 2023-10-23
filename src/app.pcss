@@ -10,7 +10,7 @@
 	--desert-sand: #dab49d;
 	--light-beige: #e6d2b7;
 	--whiteout: rgba(255, 255, 255, 30%);
-	--blackout: rgba(0, 0, 0, 60%);
+	--blackout: rgba(0, 0, 0, 50%);
 }
 
 body {
@@ -36,14 +36,14 @@ button {
 }
 
 * {
+	--tw-text-opacity: 50%;
 	transition: all 0.3s ease-in-out;
 }
 
 a {
 	@apply font-semibold;
 	text-decoration: underline;
-	color: black;
-	opacity: 60%;
+	color: var(--whiteout);
 	background-image: linear-gradient(to right, var(--caramel), var(--caput-mortuum));
 	background-size: cover;
 	background-clip: text;
@@ -51,6 +51,23 @@ a {
 	&:hover {
 		color: transparent;
 	}
+}
+
+button {
+	@apply shadow-md hover:shadow-xl active:shadow-2xl hover:bg-light-beige-400 transform transition-all ease-in;
+	border-radius: 1rem;
+	color: var(--blackout);
+	padding: 1rem;
+	transition-duration: 200ms;
+	background-color: var(--light-beige);
+
+	&:active {
+		background-color: transparent;
+	}
+}
+
+.flex-centered {
+	@apply flex justify-center items-center;
 }
 
 .grid-rows-8 {

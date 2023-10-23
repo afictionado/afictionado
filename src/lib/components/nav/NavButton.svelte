@@ -7,7 +7,7 @@
 </script>
 
 <button
-	class="rounded-r-2xl p-4 m-1 shadow-md relative flex justify-center text-center hover:shadow-xl transform transition-all ease-in duration-200"
+	class="rounded-r-2xl p-4 m-1 relative flex-centered"
 	on:click={() => {
 		window.location.href = href;
 	}}
@@ -25,7 +25,7 @@
 	<span class="hover-text-fade absolute flex items-center bottom-2 text-5xl opacity-20"
 		>{secondaryText}</span
 	>
-	<span class="relative opacity-[65%] font-semibold text-4xl">{href}</span>
+	<span class="relative opacity-80 font-semibold text-4xl">{href}</span>
 </button>
 
 <!-- IF IT WORKS, DO NOT FIX IT. -->

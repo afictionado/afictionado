@@ -4,7 +4,6 @@
 	import NavBar from "$lib/components/nav/NavBar.svelte";
 	import UtilBar from "$lib/components/nav/UtilBar.svelte";
 	import TextureOverlay from "$lib/components/util/TextureOverlay.svelte";
-	import UnderConstruction from "$lib/components/util/UnderConstruction.svelte";
 </script>
 
 <div class="flex">

@@ -8,7 +8,7 @@
 		["explore", "探", "🌎"],
 		["search", "捜", "🔎"],
 		["news", "報", "📰"],
-		["login", "通", "📲"]
+		["join", "入", "📲"]
 	];
 </script>
 
@@ -17,7 +17,7 @@
 		class="nav-sidebar float-left rounded-r-2xl shadow-2xl flex-col"
 		style="animation: bgLeft 100s linear infinite;"
 	>
-		<TitleIcon />
+		<div class="flex justify-center items-center"><TitleIcon /></div>
 		<ul class="grid grid-rows-5">
 			{#each navLinks as navLink}
 				<li class="mx-auto">
