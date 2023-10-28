@@ -1,7 +1,14 @@
-/** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
+/** @type {import("tailwindcss").Config} */
 export default {
 	content: ["./src/**/*"],
 	theme: {
+		fontFamily: {
+			sans: ["Signika Negative", ...defaultTheme.fontFamily.sans],
+			serif: [...defaultTheme.fontFamily.serif],
+			mono: [...defaultTheme.fontFamily.mono]
+		},
 		extend: {
 			colors: {
 				linen: {
