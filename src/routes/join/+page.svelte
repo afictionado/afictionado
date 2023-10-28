@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>Join the Tavern! 🍷| Afictionado</title>
+	<title>Join the Tavern! 🍷 | Afictionado</title>
 </svelte:head>
 
 {#if joinMethod === null}

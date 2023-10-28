@@ -16,10 +16,18 @@
 </script>
 
 <div class="vertically-centered-content">
-	<div>
-		<h1 class="text-6xl font-bold">Become a patron! 🍻</h1>
-		<p class="mt-2 mb-4">Come in! Our dogs don't bite and are fully vaccinated. Joey loves them.</p>
-	</div>
+	<h1 class="text-6xl font-bold">Become a patron! 🍻</h1>
+	<p class="mt-2 mb-4">
+		Come in! Our dogs don't bite, are super nuzzly and are fully vaccinated. Joey loves them lots.<br
+		/>
+		Oh? The dogs recognize you? Great! How about I
+		<a
+			href="/join?method=login"
+			on:click={() => {
+				window.location.href = "/join?method=login";
+			}}>log you in</a
+		> then?
+	</p>
 	<form class="auth-form flex-centered flex-col">
 		<ShowPasswordButton />
 		<EmailField bind:email />

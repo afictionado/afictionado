@@ -2,7 +2,7 @@
 	export let method: "signup" | "login";
 	const subMessage =
 		method === "signup"
-			? "Heard rumors of Joey's bartending magic? 🪄"
+			? "Heard rumors of Joey's bartending magic? ✨"
 			: "Back for some more stories behind the stick? 🗣️";
 	const mainButtonText = method === "signup" ? "sign up! 🆙" : "log in! 📲";
 </script>
@@ -13,6 +13,6 @@
 		window.location.href = `/join?method=${method}`;
 	}}
 >
-	<h3 class="text-sm font-semibold">{subMessage}</h3>
+	<h3 class="text-sm font-semibold mb-3">{subMessage}</h3>
 	<h2 class="text-6xl font-bold">{mainButtonText}</h2>
 </button>
