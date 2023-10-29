@@ -28,12 +28,16 @@
 			}}>log you in</a
 		> then?
 	</p>
-	<form class="auth-form flex-centered flex-col">
+	<form method="POST" action="/join/?/signup" class="auth-form flex-centered flex-col">
 		<ShowPasswordButton />
 		<EmailField bind:email />
-		<PasswordField bind:password bind:visibility={inputPasswordVisibility} />
+		<PasswordField joinMethod="signup" bind:password bind:visibility={inputPasswordVisibility} />
 		<ConfirmPasswordField bind:confirmPassword bind:visibility={inputPasswordVisibility} />
-		<button type="submit" class="m-4 text-center text-2xl font-bold bg-light-beige-500">
+		<button
+			type="submit"
+			formaction="/join?/signup"
+			class="m-4 text-center text-2xl font-bold bg-light-beige-500"
+		>
 			Sign up! 🆙
 		</button>
 	</form>

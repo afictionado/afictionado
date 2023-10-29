@@ -37,12 +37,16 @@ label,
 form,
 button,
 form > * {
+	@apply rounded-full;
 	color: var(--blackout);
 }
 
 * {
 	--tw-text-opacity: 50%;
 	transition: all 0.3s ease-in-out;
+	&:focus {
+		outline: solid #b8a892 2px;
+	}
 }
 
 a {

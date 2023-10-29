@@ -1,6 +1,8 @@
 <script lang="ts">
 	export let password: string = "";
 	export let visibility: "show" | "hide" = "hide";
+	export let joinMethod: "signup" | "login";
+	const autocomplete = joinMethod === "signup" ? "new-password" : "off";
 </script>
 
 <label for="password">
@@ -9,8 +11,8 @@
 {#if visibility === "hide"}
 	<input
 		type="password"
-		autocomplete="new-password"
-		id="signup-password"
+		{autocomplete}
+		id="password"
 		placeholder="BestTavernOwnerEver123"
 		class="auth-form-input"
 		required
@@ -19,8 +21,8 @@
 {:else}
 	<input
 		type="text"
-		autocomplete="new-password"
-		id="signup-password"
+		{autocomplete}
+		id="password"
 		placeholder="BestTavernOwnerEver123"
 		class="auth-form-input"
 		required

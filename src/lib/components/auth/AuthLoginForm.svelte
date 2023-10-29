@@ -25,11 +25,15 @@
 			}}>sign you up</a
 		> first?
 	</p>
-	<form class="auth-form flex-centered flex-col">
+	<form method="POST" action="?/login" class="auth-form flex-centered flex-col">
 		<ShowPasswordButton />
 		<EmailField bind:email />
-		<PasswordField bind:password bind:visibility={inputPasswordVisibility} />
-		<button type="submit" class="m-4 text-center text-2xl font-bold bg-light-beige-500">
+		<PasswordField joinMethod="login" bind:password bind:visibility={inputPasswordVisibility} />
+		<button
+			type="submit"
+			formaction="/join?/login"
+			class="m-4 text-center text-2xl font-bold bg-light-beige-500"
+		>
 			Log in! 📲
 		</button>
 	</form>
