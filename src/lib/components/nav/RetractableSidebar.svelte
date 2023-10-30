@@ -11,9 +11,9 @@
 
 	$: widthOnScreen = sidebarOpen ? width : "0";
 	$: if (side === "left") {
-		$leftBarWidthOnScreen = widthOnScreen;
+		leftBarWidthOnScreen.set(widthOnScreen);
 	} else {
-		$rightBarWidthOnScreen = widthOnScreen;
+		rightBarWidthOnScreen.set(widthOnScreen);
 	}
 </script>
 

@@ -1,4 +1,4 @@
-import { writable } from "svelte/store";
+import { writable, type Writable } from "svelte/store";
 
-export const leftBarWidthOnScreen = writable();
-export const rightBarWidthOnScreen = writable();
+export const leftBarWidthOnScreen: Writable<string> = writable();
+export const rightBarWidthOnScreen: Writable<string> = writable();

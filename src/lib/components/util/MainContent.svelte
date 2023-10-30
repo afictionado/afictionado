@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { leftBarWidthOnScreen, rightBarWidthOnScreen } from "$lib/stores/sidebarWidthOnScreen";
 
-	let leftMargin: unknown;
-	let rightMargin: unknown;
+	let leftMargin: string;
+	let rightMargin: string;
 
 	leftBarWidthOnScreen.subscribe((value) => {
 		leftMargin = value;
