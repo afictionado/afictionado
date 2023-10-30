@@ -79,10 +79,14 @@ This project wouldn't be possible without these technologies, all of which I'm t
 
 ### Prerequisites 📥
 
-- npm
+- [npm](https://npmjs.org)
   ```sh
   npm install npm@latest -g
   ```
+- [Supabase](https://supabase.com)
+  - There are **two places** which you will need to replace this project's (public) keys with:
+    - `./package.json`, where the `update-types` command uses your Supabase project's ID.
+    - `static/.env`, where you need to put your anon key and your Supabase project's URL in. **_(Please ensure that your data is protected with RLS before you proceed to expose the keys to the public!)_**
 
 ### Installation 📲
 
