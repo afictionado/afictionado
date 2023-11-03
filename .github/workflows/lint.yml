@@ -3,7 +3,7 @@ name: Lint Node.js project
 on: [push]
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
 
     steps:

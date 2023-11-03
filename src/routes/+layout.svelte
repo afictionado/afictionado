@@ -12,7 +12,7 @@
 	let { supabase, session } = data;
 	$: ({ supabase, session } = data);
 	onMount(() => {
-		const { data } = supabase.auth.onAuthStateChange((event, userSession) => {
+		const { data } = supabase.auth.onAuthStateChange((_event, userSession) => {
 			if (userSession?.expires_at !== session?.expires_at) {
 				invalidate("supabase:auth");
 			}

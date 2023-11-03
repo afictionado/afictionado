@@ -9,7 +9,7 @@ export const actions = {
 			email: formData.get("email") as string,
 			password: formData.get("password") as string
 		});
-		
+
 		if (signupError instanceof AuthApiError) {
 			console.log(signupError.message);
 			if (signupError.status === 400) {
