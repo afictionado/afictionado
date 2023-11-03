@@ -11,8 +11,7 @@
 		</div>
 		<p>
 			{#if $page.status === 404}
-				Got lost? I get it, tis' a big place. Or maybe you made a
-				<em>tybo. Typi. Tupo.</em> Whatever, you get the point.
+				Drunks wander to the weirdest places possible... Oh? You're not intoxicated? Sorry.
 			{/if}
 			<a href="/home">Care to return?</a>
 		</p>
