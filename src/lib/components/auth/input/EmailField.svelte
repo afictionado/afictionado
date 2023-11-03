@@ -2,13 +2,14 @@
 	export let email: string = "";
 </script>
 
-<label for="signup-email">
+<label for="email">
 	Email 📧 <span class="text-xs">(to protect the town from sentient robots!)</span>
 </label>
 <input
 	type="email"
 	autocomplete="email"
-	id="signup-email"
+	id="email"
+	name="email"
 	placeholder="joey@the-local-tavern.com"
 	class="auth-form-input"
 	required

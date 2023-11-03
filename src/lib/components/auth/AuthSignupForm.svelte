@@ -4,6 +4,7 @@
 	import EmailField from "./input/EmailField.svelte";
 	import PasswordField from "./input/PasswordField.svelte";
 	import ConfirmPasswordField from "./input/ConfirmPasswordField.svelte";
+	import { enhance } from "$app/forms";
 
 	let inputPasswordVisibility: "show" | "hide" = "hide";
 	passwordVisiblity.subscribe((visibility) => {
@@ -28,16 +29,13 @@
 			}}>log you in</a
 		> then?
 	</p>
-	<form method="POST" action="/join/?/signup" class="auth-form flex-centered flex-col">
+	<form method="POST" action="/join/?/signup" class="auth-form flex-centered flex-col" use:enhance>
 		<ShowPasswordButton />
 		<EmailField bind:email />
 		<PasswordField joinMethod="signup" bind:password bind:visibility={inputPasswordVisibility} />
 		<ConfirmPasswordField bind:confirmPassword bind:visibility={inputPasswordVisibility} />
-		<button
-			type="submit"
-			formaction="/join?/signup"
-			class="m-4 text-center text-2xl font-bold bg-light-beige-500"
-		>
+
+		<button type="submit" class="m-4 text-center text-2xl font-bold bg-light-beige-500">
 			Sign up! 🆙
 		</button>
 	</form>

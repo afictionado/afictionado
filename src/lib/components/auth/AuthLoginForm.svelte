@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { enhance } from "$app/forms";
 	import { passwordVisiblity } from "$lib/stores/passwordVisibility";
 	import ShowPasswordButton from "./PasswordVisibilityButton.svelte";
 	import EmailField from "./input/EmailField.svelte";
@@ -25,15 +26,11 @@
 			}}>sign you up</a
 		> first?
 	</p>
-	<form method="POST" action="?/login" class="auth-form flex-centered flex-col">
+	<form method="POST" action="/join/?/signup" class="auth-form flex-centered flex-col" use:enhance>
 		<ShowPasswordButton />
 		<EmailField bind:email />
 		<PasswordField joinMethod="login" bind:password bind:visibility={inputPasswordVisibility} />
-		<button
-			type="submit"
-			formaction="/join?/login"
-			class="m-4 text-center text-2xl font-bold bg-light-beige-500"
-		>
+		<button type="submit" class="m-4 text-center text-2xl font-bold bg-light-beige-500">
 			Log in! 📲
 		</button>
 	</form>

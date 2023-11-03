@@ -23,6 +23,7 @@
 		type="text"
 		{autocomplete}
 		id="password"
+		name="password"
 		placeholder="BestTavernOwnerEver123"
 		class="auth-form-input"
 		required
