@@ -5,15 +5,14 @@
 	import PasswordField from "./input/PasswordField.svelte";
 	import ConfirmPasswordField from "./input/ConfirmPasswordField.svelte";
 	import { enhance } from "$app/forms";
+	import type { PageData, ActionData } from "./$types";
 
 	let inputPasswordVisibility: "show" | "hide" = "hide";
 	passwordVisiblity.subscribe((visibility) => {
 		inputPasswordVisibility = visibility;
 	});
-
-	let email: string;
-	let password: string;
-	let confirmPassword: string;
+	export let data: PageData;
+	export let form: ActionData;
 </script>
 
 <div class="vertically-centered-content">
@@ -31,9 +30,9 @@
 	</p>
 	<form method="POST" action="/join/?/signup" class="auth-form flex-centered flex-col" use:enhance>
 		<ShowPasswordButton />
-		<EmailField bind:email />
-		<PasswordField joinMethod="signup" bind:password bind:visibility={inputPasswordVisibility} />
-		<ConfirmPasswordField bind:confirmPassword bind:visibility={inputPasswordVisibility} />
+		<EmailField email={form?.email ?? ""} />
+		<PasswordField joinMethod="signup" bind:visibility={inputPasswordVisibility} />
+		<ConfirmPasswordField bind:visibility={inputPasswordVisibility} />
 
 		<button type="submit" class="m-4 text-center text-2xl font-bold bg-light-beige-500">
 			Sign up! 🆙

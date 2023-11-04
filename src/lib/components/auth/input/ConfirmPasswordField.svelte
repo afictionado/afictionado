@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let confirmPassword: string = "";
+	let confirmPassword: string = "";
 	export let visibility: "show" | "hide" = "hide";
 </script>
 

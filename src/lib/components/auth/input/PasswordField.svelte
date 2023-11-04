@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let password: string = "";
+	let password: string = "";
 	export let visibility: "show" | "hide" = "hide";
 	export let joinMethod: "signup" | "login";
 	const autocomplete = joinMethod === "signup" ? "new-password" : "off";

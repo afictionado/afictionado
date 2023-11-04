@@ -12,6 +12,9 @@
 		<p>
 			{#if $page.status === 404}
 				Drunks wander to the weirdest places possible... Oh? You're not intoxicated? Sorry.
+			{:else if $page.status === 500}
+				Our bartender Joey passed out again... Someone get the surgeon! Oh, and while we're trying
+				to wake him up...
 			{/if}
 			<a href="/home">Care to return?</a>
 		</p>
