@@ -4,15 +4,18 @@
 	import EmailField from "./input/EmailField.svelte";
 	import PasswordField from "./input/PasswordField.svelte";
 	import ConfirmPasswordField from "./input/ConfirmPasswordField.svelte";
-	import { enhance } from "$app/forms";
-	import type { PageData, ActionData } from "./$types";
+	import { applyAction, enhance } from "$app/forms";
+	import AuthSubmitButton from "./input/AuthSubmitButton.svelte";
+	import { goto } from "$app/navigation";
 
 	let inputPasswordVisibility: "show" | "hide" = "hide";
 	passwordVisiblity.subscribe((visibility) => {
 		inputPasswordVisibility = visibility;
 	});
-	export let data: PageData;
-	export let form: ActionData;
+
+	export let error: string | undefined;
+	export let email: string | undefined;
+	let submitted = false;
 </script>
 
 <div class="vertically-centered-content">
@@ -21,21 +24,34 @@
 		Come in! Our dogs don't bite, are super nuzzly and are fully vaccinated. Joey loves them lots.<br
 		/>
 		Oh? The dogs recognize you? Great! How about I
-		<a
-			href="/join?method=login"
-			on:click={() => {
-				window.location.href = "/join?method=login";
-			}}>log you in</a
-		> then?
+		<a href="/login">log you in</a> then?
 	</p>
-	<form method="POST" action="/join/?/signup" class="auth-form flex-centered flex-col" use:enhance>
+
+	<form
+		method="POST"
+		class="auth-form flex-centered flex-col"
+		use:enhance={() => {
+			submitted = true;
+			return async ({ result }) => {
+				if (result.type === "redirect") {
+					goto(result.location);
+				} else {
+					await applyAction(result);
+					setTimeout(() => {
+						submitted = false;
+					}, 1000);
+				}
+			};
+		}}
+	>
 		<ShowPasswordButton />
-		<EmailField email={form?.email ?? ""} />
+		<EmailField email={email ?? ""} />
 		<PasswordField joinMethod="signup" bind:visibility={inputPasswordVisibility} />
 		<ConfirmPasswordField bind:visibility={inputPasswordVisibility} />
 
-		<button type="submit" class="m-4 text-center text-2xl font-bold bg-light-beige-500">
-			Sign up! 🆙
-		</button>
+		{#if error}
+			<p class="error-text">{error}</p>
+		{/if}
+		<AuthSubmitButton bind:submitted>Sign up! 🆙</AuthSubmitButton>
 	</form>
 </div>

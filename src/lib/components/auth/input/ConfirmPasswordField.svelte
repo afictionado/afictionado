@@ -10,6 +10,7 @@
 	<input
 		type="password"
 		id="confirm-password"
+		name="confirm-password"
 		placeholder="ILoveBreakingThe4thWall"
 		class="auth-form-input"
 		required

@@ -47,6 +47,9 @@ form > * {
 	&:focus {
 		outline: solid #b8a892 2px;
 	}
+	&:disabled {
+		opacity: 50%;
+	}
 }
 
 a {
@@ -74,7 +77,7 @@ form label {
 }
 
 .error-text {
-	@apply text-red-500 text-opacity-50;
+	@apply text-red-500 text-opacity-50 font-semibold -mb-3 mt-1 text-sm;
 }
 
 .flex-centered {
