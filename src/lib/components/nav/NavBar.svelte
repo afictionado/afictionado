@@ -1,16 +1,30 @@
 <script lang="ts">
+	import type { Session } from "@supabase/supabase-js";
 	import TitleIcon from "$lib/components/nav/TitleIcon.svelte";
 	import NavButton from "$lib/components/nav/NavButton.svelte";
 	import RetractableSidebar from "$lib/components/nav/RetractableSidebar.svelte";
 
-	const navLinks = [
+	export let session: Session | null;
+
+	const stayingNavLinks = [
 		["home", "家", "🏡"],
 		["explore", "探", "🌎"],
 		["search", "捜", "🔎"],
-		["news", "報", "📰"],
-		["signup", "上", "🆙"],
-		["login", "内", "📲"]
+		["news", "報", "📰"]
 	];
+	let navLinks = stayingNavLinks;
+	$: updateNavLinksFromAuth(session);
+
+	function updateNavLinksFromAuth(session: Session | null) {
+		navLinks = stayingNavLinks.concat(
+			session
+				? [["logout", "出", "📤"]]
+				: [
+						["signup", "上", "🆙"],
+						["login", "内", "📲"]
+				  ]
+		);
+	}
 </script>
 
 <RetractableSidebar side="left" width="12rem">

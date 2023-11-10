@@ -15,6 +15,7 @@
 
 	export let error: string | undefined;
 	export let email: string | undefined;
+	export let backTo: string | null;
 	let submitted = false;
 
 	let justSignedUp = $page.url.searchParams.get("justSignedUp") === "true";
@@ -24,6 +25,8 @@
 	<h1 class="text-6xl font-bold">
 		{#if justSignedUp}
 			Let's wrap this up! 🎁
+		{:else if backTo}
+			Hey there! 😄
 		{:else}
 			Welcome back! 👋
 		{/if}
@@ -33,6 +36,9 @@
 			Great! I just got you down on our phonebook (yes we use one, don't ask).<br />The local
 			psychic sent you <span class="font-bold underline">a confirmation email</span>, and after
 			that, you're all good to log in!
+		{:else if backTo}
+			Welcome! Looks like the dogs chased you out here to log in first before you can play with
+			them.<br />You've never been here before? Let's <a href="/signup">sign you up</a> then!
 		{:else}
 			Good to see ya again! I told you the dogs were the best marketing strategy ever.<br />
 			Oh? The dogs don't recognize you? How about I
@@ -50,9 +56,6 @@
 					goto(result.location);
 				} else {
 					await applyAction(result);
-					setTimeout(() => {
-						submitted = false;
-					}, 1000);
 				}
 			};
 		}}

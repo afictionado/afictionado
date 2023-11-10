@@ -37,9 +37,6 @@
 					goto(result.location);
 				} else {
 					await applyAction(result);
-					setTimeout(() => {
-						submitted = false;
-					}, 1000);
 				}
 			};
 		}}

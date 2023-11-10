@@ -6,8 +6,9 @@
 	import TextureOverlay from "$lib/components/util/TextureOverlay.svelte";
 	import { invalidate } from "$app/navigation";
 	import { onMount } from "svelte";
+	import type { PageData } from "./$types";
 
-	export let data;
+	export let data: PageData;
 
 	let { supabase, session } = data;
 	$: ({ supabase, session } = data);
@@ -22,7 +23,7 @@
 </script>
 
 <div class="flex">
-	<div><NavBar /></div>
+	<div><NavBar {session} /></div>
 	<MainContent><slot /></MainContent>
 	<div><UtilBar /></div>
 	<TextureOverlay />

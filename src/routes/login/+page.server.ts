@@ -4,7 +4,7 @@ import { AuthApiError } from "@supabase/supabase-js";
 import { fail, redirect } from "@sveltejs/kit";
 
 export const actions = {
-	default: async ({ request, locals }) => {
+	default: async ({ request, locals, url }) => {
 		const formData = await request.formData();
 		const loginData = {
 			email: formData.get("email") as string,
@@ -29,6 +29,6 @@ export const actions = {
 			}
 			return fail(500);
 		}
-		throw redirect(303, "/home");
+		throw redirect(303, url.searchParams.get("backTo") ?? "/home");
 	}
 };

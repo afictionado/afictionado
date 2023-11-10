@@ -1,7 +1,9 @@
 import { createServerClient } from "@supabase/ssr";
-import type { Handle } from "@sveltejs/kit";
+import { redirect } from "@sveltejs/kit";
 
-export const handle: Handle = async ({ event, resolve }) => {
+const protectedRoutes = ["/home", "/logout", "/profile"];
+
+export async function handle({ event, resolve }) {
 	event.locals.supabase = createServerClient(
 		import.meta.env.VITE_SUPABASE_URL,
 		import.meta.env.VITE_SUPABASE_ANON_KEY,
@@ -23,9 +25,21 @@ export const handle: Handle = async ({ event, resolve }) => {
 		} = await event.locals.supabase.auth.getSession();
 		return session;
 	};
+
+	const route = event.route.id || "";
+	if (
+		protectedRoutes.some((protectedRoute) => {
+			return route.startsWith(protectedRoute);
+		})
+	) {
+		if (!route.startsWith("/logout") && !(await event.locals.getSession())) {
+			throw redirect(303, `/login?backTo=${route}`);
+		}
+	}
+
 	return resolve(event, {
 		filterSerializedResponseHeaders(name) {
 			return name === "content-range";
 		}
 	});
-};
+}
