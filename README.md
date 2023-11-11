@@ -80,9 +80,11 @@ This project wouldn't be possible without these technologies, all of which I'm t
 ### Prerequisites 📥
 
 - [npm](https://npmjs.org)
+
   ```sh
   npm install npm@latest -g
   ```
+
 - [Supabase](https://supabase.com)
   - There are **two places** which you will need to replace this project's (public) keys with:
     - `./package.json`, where the `update-types` command uses your Supabase project's ID.
@@ -91,13 +93,17 @@ This project wouldn't be possible without these technologies, all of which I'm t
 ### Installation 📲
 
 1. Clone the repo
+
    ```sh
    git clone https://github.com/afictionado/afictionado.git
    ```
+
 2. Install NPM packages
+
    ```sh
    npm install
    ```
+
 3. Build and serve!
 
 ```sh
@@ -134,15 +140,15 @@ This project is distributed under the MIT License. See [LICENSE](LICENSE) for mo
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Contact me!
+## Contact me ☎️
 
-Viet - ramendev2009@gmail.com
+Viet (like the country) - `ramendev2009@gmail.com`
 
 Project Link: [https://github.com/afictionado/afictionado](https://github.com/afictionado/afictionado)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Acknowledgments
+## Acknowledgments 🙇
 
 Apart from the major technologies listed above, this project wouldn't have been possible without the support of:
 
